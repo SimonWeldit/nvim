@@ -12,6 +12,10 @@ vim.cmd('autocmd FileType nim setlocal foldmethod=manual')
 -- Enable relative line numbers
 vim.wo.relativenumber = true
 
+-- New line without insert mode with leader + o
+vim.keymap.set('n', '<leader>o', 'o<ESC>', {noremap = true})
+vim.keymap.set('n', '<leader>O', 'O<ESC>', {noremap = true})
+
 -- Change line number colors
 vim.cmd('highlight LineNumber ctermfg=yellow')
 vim.cmd('autocmd ColorScheme * highlight LineNr guibg=none guifg=LineNumber')
