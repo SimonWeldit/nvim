@@ -46,6 +46,7 @@ keymap('t', '<C-w>', [[<C-\><C-n><C-w>]], opts)
 require('packer').startup(function()
   use 'wbthomason/packer.nvim'
   use 'vimwiki/vimwiki'
+  use 'junegunn/goyo.vim'
   use ('nvim-treesitter/nvim-treesitter', {run = 'TSUpdate'})
   use 'folke/tokyonight.nvim'
   use 'nvim-tree/nvim-web-devicons'
@@ -53,6 +54,7 @@ require('packer').startup(function()
   use 'tpope/vim-surround'
   use 'jwalton512/vim-blade'
   use 'alaviss/nim.nvim'
+  use 'fatih/vim-go'
   use 'alvan/vim-closetag'
   use 'tpope/vim-fugitive'
   use 'vim-airline/vim-airline'
@@ -122,28 +124,29 @@ lsp.nvim_workspace()
 lsp.setup()
 
 -- Nvim tree config
-require("nvim-tree").setup({
-  sort_by = "case_sensitive",
-  view = {
-    adaptive_size = true,
-    mappings = {
-      list = {
-        { key = "u", action = "dir_up" },
-      },
-    },
-  },
-  renderer = {
-    group_empty = true,
-  },
-  filters = {
-    dotfiles = true,
-  },
-})
+-- require("nvim-tree").setup({
+--   sort_by = "case_sensitive",
+--   on_attach = on_attach,
+--   view = {
+--     adaptive_size = true,
+--     mappings = {
+--       list = {
+--         { key = "u", action = "dir_up" },
+--       },
+--     },
+--   },
+--   renderer = {
+--     group_empty = true,
+--   },
+--   filters = {
+--     dotfiles = true,
+--   },
+-- })
 
 -- toggle NERDTree show/hide using <C-n> and <leader>n
-keymap("n", "<leader>n", ":NvimTreeToggle<CR>", {noremap = true})
+-- keymap("n", "<leader>n", ":NvimTreeToggle<CR>", {noremap = true})
 -- reveal open buffer in NERDTree
-keymap("n", "<leader>r", ":NvimTreeFocus<CR>", {noremap = true})
+-- keymap("n", "<leader>r", ":NvimTreeFocus<CR>", {noremap = true})
 
 -- telescope config
 local builtin = require('telescope.builtin')

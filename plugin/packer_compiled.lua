@@ -109,6 +109,11 @@ _G.packer_plugins = {
     path = "/home/simon/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  ["goyo.vim"] = {
+    loaded = true,
+    path = "/home/simon/.local/share/nvim/site/pack/packer/start/goyo.vim",
+    url = "https://github.com/junegunn/goyo.vim"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/simon/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
@@ -219,6 +224,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/simon/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-go"] = {
+    loaded = true,
+    path = "/home/simon/.local/share/nvim/site/pack/packer/start/vim-go",
+    url = "https://github.com/fatih/vim-go"
   },
   ["vim-surround"] = {
     loaded = true,
